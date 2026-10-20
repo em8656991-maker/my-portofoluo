@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Mooda Mohamed — Graphic Designer Portfolio">
+
+  <title>Mooda Mohamed | Graphic Designer</title>
+
+  <style>
+
+    :root {
+
+      --red: #e50914;
+
+      --black: #101010;
+
+      --card: #191919;
+
+      --white: #ffffff;
+
+      --muted: #bdbdbd;
+
+    }
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      background: var(--black);
+
+      color: var(--white);
+
+      font-family: Arial, sans-serif;
+
+      line-height: 1.7;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    .container {
+
+      width: min(1100px, 90%);
+
+      margin: auto;
+
+    }
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 10;
+
+      background: rgba(16, 16, 16, .96);
+
+      border-bottom: 1px solid #292929;
+
+    }
+
+    nav {
+
+      min-height: 75px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+    }
+
+    .logo {
+
+      font-size: 22px;
+
+      font-weight: 900;
+
+    }
+
+    .logo span,
+
+    .red {
+
+      color: var(--red);
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 20px;
+
+      font-size: 14px;
+
+    }
+
+    .nav-links a:hover {
+
+      color: var(--red);
+
+    }
+
+    .hero {
+
+      min-height: 560px;
+
+      display: flex;
+
+      align-items: center;
+
+      background:
+
+        radial-gradient(ellipse at 85% 35%, #4c0b10, transparent 40%),
+
+        var(--black);
+
+      padding: 90px 0;
+
+    }
+
+    .hero-content {
+
+      max-width: 760px;
+
+    }
+
+    .eyebrow {
+
+      color: var(--red);
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+    }
+
+    h1 {
+
+      font-size: clamp(44px, 8vw, 82px);
+
+      line-height: 1.08;
+
+      letter-spacing: -2px;
+
+      margin: 20px 0;
+
+    }
+
+    .hero p,
+
+    .section-intro {
+
+      color: var(--muted);
+
+      max-width: 650px;
+
+    }
+
+    .hero p {
+
+      font-size: 18px;
+
+      margin-bottom: 28px;
+
+    }
+
+    .btn {
+
+      display: inline-block;
+
+      padding: 12px 24px;
+
+      margin: 5px 8px 5px 0;
+
+      border-radius: 5px;
+
+      background: var(--red);
+
+      color: white;
+
+      font-weight: bold;
+
+      transition: .2s;
+
+    }
+
+    .btn:hover {
+
+      transform: translateY(-2px);
+
+      background: #b90710;
+
+    }
+
+    .btn-outline {
+
+      background: transparent;
+
+      border: 1px solid #555;
+
+    }
+
+    section {
+
+      padding: 80px 0;
+
+    }
+
+    .section-title {
+
+      font-size: clamp(30px, 5vw, 44px);
+
+      margin-bottom: 10px;
+
+    }
+
+    .section-intro {
+
+      margin-bottom: 32px;
+
+    }
+
+    .grid {
+
+      display: grid;
+
+      gap: 20px;
+
+    }
+
+    .about-grid {
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+    .skills-grid {
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+
+    .projects-grid,
+
+    .services-grid {
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+
+    .card {
+
+      background: var(--card);
+
+      border: 1px solid #292929;
+
+      border-radius: 12px;
+
+      padding: 24px;
+
+    }
+
+    .card h3 {
+
+      margin-bottom: 8px;
+
+    }
+
+    .card p {
+
+      color: var(--muted);
+
+    }
+
+    .skill-icon {
+
+      color: var(--red);
+
+      font-size: 30px;
+
+      font-weight: 900;
+
+    }
+
+    .skill-card {
+
+      text-align: center;
+
+    }
+
+    .project-art {
+
+      min-height: 190px;
+
+      padding: 20px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      border-radius: 8px;
+
+      margin-bottom: 18px;
+
+      background: linear-gradient(135deg, #30070a, #e50914);
+
+    }
+
+    .project-art h3 {
+
+      font-size: 27px;
+
+      line-height: 1.2;
+
+    }
+
+    .project-art.light {
+
+      color: #111;
+
+      background: linear-gradient(135deg, #fff, #bcbcbc);
+
+    }
+
+    .project-art.dark {
+
+      background: linear-gradient(135deg, #050505, #3b3b3b);
+
+      border: 1px solid #444;
+
+    }
+
+    .project-label {
+
+      color: var(--red);
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 8px;
+
+    }
+
+    .contact-box {
+
+      background: linear-gradient(135deg, #290609, #171717);
+
+      border: 1px solid #3b2426;
+
+      border-radius: 15px;
+
+      padding: 40px;
+
+    }
+
+    .contact-box p {
+
+      color: var(--muted);
+
+      margin: 12px 0 20px;
+
+    }
+
+    footer {
+
+      padding: 25px 0;
+
+      border-top: 1px solid #292929;
+
+      color: var(--muted);
+
+      text-align: center;
+
+      font-size: 14px;
+
+    }
+
+    @media (max-width: 750px) {
+
+      nav {
+
+        padding: 16px 0;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+      }
+
+      .nav-links {
+
+        gap: 12px;
+
+      }
+
+      .about-grid,
+
+      .skills-grid,
+
+      .projects-grid,
+
+      .services-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .hero {
+
+        min-height: auto;
+
+        padding: 85px 0;
+
+      }
+
+      section {
+
+        padding: 60px 0;
+
+      }
+
+      .contact-box {
+
+        padding: 25px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="container">
+
+      <a class="logo" href="#home">MOODA<span>.</span></a>
+
+      <div class="nav-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Portfolio</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-content">
+
+        <div class="eyebrow">Creative Graphic Designer</div>
+
+        <h1>MOODA<br><span>MOHAMED.</span></h1>
+
+        <p>
+
+          I create modern visual designs that help brands stand out.
+
+          My focus is on social media designs, advertising creatives,
+
+          and visual branding.
+
+        </p>
+
+        <a class="btn" href="#projects">View My Work</a>
+
+        <a class="btn btn-outline" href="#contact">Contact Me</a>
+
+      </div>
+
+    </section>
+
+    <section id="about">
+
+      <div class="container">
+
+        <h2 class="section-title">About <span class="red">Me</span></h2>
+
+        <p class="section-intro">
+
+          A creative designer interested in turning ideas into clear,
+
+          attractive, and memorable visual experiences.
+
+        </p>
+
+        <div class="grid about-grid">
+
+          <div class="card">
+
+            <h3>Who I Am</h3>
+
+            <p>
+
+              I'm Mooda Mohamed, a graphic designer focused on creating
+
+              engaging visual content for businesses and social media.
+
+              I enjoy combining typography, color, and composition to
+
+              communicate ideas effectively.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3>My Approach</h3>
+
+            <p>
+
+              Every design starts with understanding the message and
+
+              audience. I aim to deliver clean, consistent visuals
+
+              suitable for advertising campaigns and brand identity.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3>Education</h3>
+
+            <p>
+
+              College of Computers and Information.
+
+              Interested in design, technology, and continuous learning.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3>Experience</h3>
+
+            <p>
+
+              Practical experience in graphic design and sales, with an
+
+              interest in social media content, promotional designs,
+
+              and marketing visuals.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="skills">
+
+      <div class="container">
+
+        <h2 class="section-title">My <span class="red">Skills</span></h2>
+
+        <p class="section-intro">
+
+          Tools and creative skills I use to develop visual content.
+
+        </p>
+
+        <div class="grid skills-grid">
+
+          <div class="card skill-card">
+
+            <div class="skill-icon">Ps</div>
+
+            <h3>Adobe Photoshop</h3>
+
+            <p>Photo editing and social media design.</p>
+
+          </div>
+
+          <div class="card skill-card">
+
+            <div class="skill-icon">AI</div>
+
+            <h3>AI Tools</h3>
+
+            <p>Creative assistance and visual exploration.</p>
+
+          </div>
+
+          <div class="card skill-card">
+
+            <div class="skill-icon">GD</div>
+
+            <h3>Graphic Design</h3>
+
+            <p>Layout, typography, color, and composition.</p>
+
+          </div>
+
+          <div class="card skill-card">
+
+            <div class="skill-icon">SM</div>
+
+            <h3>Social Media</h3>
+
+            <p>Promotional posts and campaign creatives.</p>
+
+          </div>
+
+          <div class="card skill-card">
+
+            <div class="skill-icon">BR</div>
+
+            <h3>Branding</h3>
+
+            <p>Visual direction and brand consistency.</p>
+
+          </div>
+
+          <div class="card skill-card">
+
+            <div class="skill-icon">AD</div>
+
+            <h3>Advertising</h3>
+
+            <p>Design concepts for marketing messages.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="projects">
+
+      <div class="container">
+
+        <h2 class="section-title">Selected <span class="red">Works</span></h2>
+
+        <p class="section-intro">
+
+          Concept projects created to demonstrate different design
+
+          directions. These are portfolio concepts, not claimed client work.
+
+        </p>
+
+        <div class="grid projects-grid">
+
+          <article class="card">
+
+            <div class="project-art">
+
+              <div>
+
+                <div class="project-label">SKINCARE CAMPAIGN</div>
+
+                <h3>YOUR SKIN.<br>YOUR GLOW.</h3>
+
+              </div>
+
+            </div>
+
+            <h3>Skincare Social Media</h3>
+
+            <p>
+
+              A bold promotional concept for a skincare product,
+
+              using a clean layout and strong visual hierarchy.
+
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="project-art light">
+
+              <div>
+
+                <div class="project-label">MINIMAL BRANDING</div>
+
+                <h3>LESS<br>BUT BETTER.</h3>
+
+              </div>
+
+            </div>
+
+            <h3>Minimal Brand Concept</h3>
+
+            <p>
+
+              A minimal visual direction exploring typography,
+
+              balance, and a simple monochrome identity.
+
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="project-art dark">
+
+              <div>
+
+                <div class="project-label">EVENT PROMOTION</div>
+
+                <h3>MAKE IT<br>HAPPEN.</h3>
+
+              </div>
+
+            </div>
+
+            <h3>Advertising Poster</h3>
+
+            <p>
+
+              A promotional poster concept designed to attract
+
+              attention with bold type and a dramatic contrast.
+
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="project-art light">
+
+              <div>
+
+                <div class="project-label">FASHION CAMPAIGN</div>
+
+                <h3>OWN<br>YOUR STYLE.</h3>
+
+              </div>
+
+            </div>
+
+            <h3>Fashion Social Post</h3>
+
+            <p>
+
+              A contemporary fashion campaign concept with a
+
+              confident, editorial-inspired design.
+
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="project-art">
+
+              <div>
+
+                <div class="project-label">DIGITAL MARKETING</div>
+
+                <h3>GROW<br>YOUR BRAND.</h3>
+
+              </div>
+
+            </div>
+
+            <h3>Marketing Creative</h3>
+
+            <p>
+
+              A marketing graphic concept focused on a clear message
+
+              and a strong call to action.
+
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="project-art dark">
+
+              <div>
+
+                <div class="project-label">VISUAL IDENTITY</div>
+
+                <h3>BUILT TO<br>STAND OUT.</h3>
+
+              </div>
+
+            </div>
+
+            <h3>Brand Identity Concept</h3>
+
+            <p>
+
+              An experimental identity direction for a modern
+
+              business, using a strong black-and-red palette.
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="services">
+
+      <div class="container">
+
+        <h2 class="section-title">My <span class="red">Services</span></h2>
+
+        <p class="section-intro">
+
+          Design services I aim to provide for brands and businesses.
+
+        </p>
+
+        <div class="grid services-grid">
+
+          <div class="card">
+
+            <h3>Social Media Designs</h3>
+
+            <p>
+
+              Promotional posts and visual content for digital platforms.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3>Advertising Design</h3>
+
+            <p>
+
+              Posters, offers, and campaign visuals for marketing.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3>Branding Concepts</h3>
+
+            <p>
+
+              Visual identity concepts with consistent colors and typography.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="eyebrow">Let's Work Together</div>
+
+          <h2 class="section-title">
+
+            Have a project in <span class="red">mind?</span>
+
+          </h2>
+
+          <p>
+
+            I'm interested in creative projects and opportunities
+
+            to help brands communicate through design.
+
+            Replace the contact details below with your real details.
+
+          </p>
+
+          <!-- Replace the example email with your real email -->
+
+          <a class="btn"
+
+             href="mailto:YOUR-EMAIL@example.com">
+
+            Email Me
+
+          </a>
+
+          <!-- Add your Behance or LinkedIn profile URL here -->
+
+          <a class="btn btn-outline"
+
+             href="https://www.behance.net/"
+
+             target="_blank"
+
+             rel="noopener noreferrer">
+
+            Behance
+
+          </a>
+
+          <p>
+
+            Email: YOUR-EMAIL@example.com
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container">
+
+      © <span id="year"></span> Mooda Mohamed. Portfolio concept.
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    document.getElementById("year").textContent =
+
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+
+</html>
